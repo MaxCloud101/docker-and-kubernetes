@@ -23,6 +23,8 @@ Check correct installation
 Docker run hello-world
 ```
 
+Docker use Namespacing and Control Groups
+
 ### Namespacing
 
 Isolating resources per process (or group of processes)
@@ -72,7 +74,7 @@ docker run <image-name>
 - Override default startup command
 
 ```
-docker run <image-name> command
+docker run <image-name> <command>
 ```
 Note: docker run = docker create + docker start
 
@@ -145,4 +147,26 @@ docker exec -it <container-id> sh
 
 ```
 docker run -it <image-id> sh
+```
+
+## Building custom images
+
+- To build a image
+
+```
+docker build .
+```
+
+- To biuld image with tag
+
+```
+docker build -t docker-id/project-name/verion . 
+```
+
+## Manual image generation
+
+- To create image from docker-container
+
+```
+docker commit -c 'CMD <command>' <container-id>
 ```
