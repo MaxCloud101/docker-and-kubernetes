@@ -76,6 +76,13 @@ docker run <image-name>
 ```
 docker run <image-name> <command>
 ```
+
+- Run docker as a daemon
+
+```
+docker run -d redis
+```
+
 Note: docker run = docker create + docker start
 
 - Listing running containers
@@ -170,3 +177,42 @@ docker build -t docker-id/project-name/verion .
 ```
 docker commit -c 'CMD <command>' <container-id>
 ```
+
+## Docker compose
+
+- To run docker compose
+
+```
+docker-compose up
+```
+
+- To build and run docker compose
+
+```
+docker-compose up --build
+```
+
+- Docker compose as daemon
+
+```
+docker-compose up -d
+```
+
+- To stop docker compose
+
+```
+docker-compose down
+```
+
+- To list docker compose
+
+```
+docker-compose ps
+```
+
+Docker compose restart policies
+
+- No: Never attempt restart this
+- Always: If this container stop for any reason always attempt to restart it
+- on-failure: Only restart if the container stop with an error code
+- unless-stopped: Always restart unless we (the developer) forcibly stop it
