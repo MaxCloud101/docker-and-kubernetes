@@ -216,3 +216,33 @@ Docker compose restart policies
 - Always: If this container stop for any reason always attempt to restart it
 - on-failure: Only restart if the container stop with an error code
 - unless-stopped: Always restart unless we (the developer) forcibly stop it
+
+# Kubernetes
+
+There are two parts:
+
+- minikube: manage clusters in local
+- kubectl: mana container in local and produccion
+
+## Minikube
+
+- To run
+
+```
+minikube start
+```
+
+- Check if is running
+
+```
+minikube status
+```
+
+## Kubectl
+
+- Check if is correctly installed
+
+```
+kubectl cluster-info
+```
+
