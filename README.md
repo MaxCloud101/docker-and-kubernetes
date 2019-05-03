@@ -263,6 +263,12 @@ minikube start
 minikube status
 ```
 
+- Get ip
+
+```
+minikube ip
+```
+
 ## Kubectl
 
 - Check if is correctly installed
@@ -311,4 +317,24 @@ kubectl describe <object-type> <object-name>
 
 ```
 kubectl delete -f <filename>
+```
+
+- Imperative command to update an image
+
+```
+kubectl set image <object-type> / <object-name> <container-name>=<container-image>:<container-version>
+```
+```
+kubectl set image deployment/client-deployment clent=damianenko/multi-client:v5
+```
+## Ways to deploy container
+
+- Delete and recreate pods (Bad solution)
+- Tag image with versions and update config file (Medium solution)
+- Use an imperative command
+
+## Configure docker client to use minikube VM
+
+```
+eval $(minikube docker-env)
 ```
