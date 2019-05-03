@@ -224,6 +224,31 @@ There are two parts:
 - minikube: manage clusters in local
 - kubectl: mana container in local and produccion
 
+## Api versions and objects
+
+### apiVersion: v1
+
+- ComponentStatus
+- configMap
+- Endpoints
+- Event
+- Namespace
+- Pod
+
+### apiVersion: apps/v1
+
+- ControllerRevision
+- StatefulSet
+
+## Pods
+
+## Services
+
+- ClusterIp
+- NodePort: Export container outside the world, (Usually only for development)
+- LoadBalancer
+- Ingress
+
 ## Minikube
 
 - To run
@@ -246,3 +271,32 @@ minikube status
 kubectl cluster-info
 ```
 
+- Feed a config file to Kubectl
+
+```
+kubectl apply -f <filename>
+```
+
+- Print status of all runing pods
+
+```
+kubectl get pods
+```
+
+- Print status of all runing pods
+
+```
+kubectl get services
+```
+
+- Get detailed info
+
+```
+kubectl describe <object-type> <object-name>
+```
+
+- Remove an object
+
+```
+kubectl delete -f <filename>
+```
