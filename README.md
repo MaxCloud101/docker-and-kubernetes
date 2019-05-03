@@ -283,7 +283,19 @@ kubectl apply -f <filename>
 kubectl get pods
 ```
 
-- Print status of all runing pods
+- Print status of all runing pods with more information
+
+```
+kubectl get pods -o wide
+```
+
+- Print status of all runing deployments
+
+```
+kubectl get deployments
+```
+
+- Print status of all runing services
 
 ```
 kubectl get services
