@@ -240,14 +240,35 @@ There are two parts:
 - ControllerRevision
 - StatefulSet
 
-## Pods
+## Kubernetes Objects
+### 1 Pods
 
-## Services
+### 2 Services
 
-- ClusterIp
+- ClusterIp: Export containers into cluster
 - NodePort: Export container outside the world, (Usually only for development)
 - LoadBalancer
 - Ingress
+
+### 3 Deployments
+
+### 4 Secrets
+
+- Securely stores pieces of information
+
+## Kubernetes volume types
+
+- Volume: Store data at pod level, this can be access by other pods, but if the entired pod is deleted or recreated, the volume is erased.
+- Persistent volume: Store data out of the pods, This is deleted when the administrator specifies it
+- Persistent volume Claim: It is an advertising of volume options.
+  - Statically provisioned persistent volume: Its exists
+  - Dinamically provisioned persistent volume: Created when ask for it
+
+## Volume access modes
+
+- ReadWriteOne: Can be used by a single node
+- ReadOnlyMany: Multiple nodes can read from this
+- ReadWriteMAny: Can be read and written to by many nodes
 
 ## Minikube
 
@@ -307,6 +328,12 @@ kubectl get deployments
 kubectl get services
 ```
 
+- Print status of all persisten volumes
+
+```
+kubectl get pv
+```
+
 - Get detailed info
 
 ```
@@ -327,6 +354,28 @@ kubectl set image <object-type> / <object-name> <container-name>=<container-imag
 ```
 kubectl set image deployment/client-deployment clent=damianenko/multi-client:v5
 ```
+
+- Get Storage classes
+
+```
+kubectl get storageclass
+```
+
+```
+kubectl describe storageclass
+```
+
+- To create a secret object
+
+```
+kubectl create secret <secret-type> <secret_name> --from-literal key=value
+```
+where secret-type = generic, docker-registry, tls
+
+```
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
+```
+
 ## Ways to deploy container
 
 - Delete and recreate pods (Bad solution)
