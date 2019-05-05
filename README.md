@@ -245,16 +245,18 @@ There are two parts:
 
 ### 2 Services
 
+Setup a networking in a kubernetes cluster
+
 - ClusterIp: Export containers into cluster
 - NodePort: Export container outside the world, (Usually only for development)
-- LoadBalancer
-- Ingress
+- LoadBalancer: Legacy way of getting network traffic into a cluster
+- Ingress: Expose a set of services outside the world
 
 ### 3 Deployments
 
 ### 4 Secrets
 
-- Securely stores pieces of information
+Securely stores pieces of information
 
 ## Kubernetes volume types
 
@@ -386,4 +388,12 @@ kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
 
 ```
 eval $(minikube docker-env)
+```
+
+## Ingress nginx
+
+https://kubernetes.github.io/ingress-nginx/
+
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
 ```
