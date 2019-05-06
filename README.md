@@ -292,6 +292,12 @@ minikube status
 minikube ip
 ```
 
+- To review the dashboard
+
+```
+minikube dashboard
+```
+
 ## Kubectl
 
 - Check if is correctly installed
