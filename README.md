@@ -7,16 +7,25 @@
 - Section 2: Manipulating containers with Docker client
 - Section 3: Building custom images through docker server
 - Section 4: Making real projects with docker
+	- Project: simple-web-app
 - Section 5: Docker Compose with multiple local containers
+	- Project: visits
 - Section 6: Creating a production-grade workflow
+	- Project: production-grade
 - Section 7: Continuous integration and Deployment with AWS
 - Section 8: Building a Multi-Container Application
 - Section 9: "Dockerizing" multiple services
+	- Project: complex
 - Section 10: A Continuous integration workflow for multiple images
+	- Project: complex
 - Section 11: Multi-Container deployments
+	- Project: complex
 - Section 12: Onwards to kubernetes!
+	- Project: simplek8s
 - Section 13: Maintaining Sets of Containers with Deployments
+	- Project: simplek8s
 - Section 14: A multicontainer App with kuberenetes
+	- Project: complexk8s
 - Section 15: Handling traffic with ingress Controllers
 - Section 16: Kubernetes Production Deployment
 - Section 17: HTTPS Setup with kubernetes
