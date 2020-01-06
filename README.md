@@ -1,6 +1,29 @@
 # Docker and Kubernetes
  This repository contain the information of the course: Docker and Kubernetes
 
+# Projects by chapters
+
+- Section 1: Dive into docker!
+- Section 2: Manipulating containers with Docker client
+- Section 3: Building custom images through docker server
+- Section 4: Making real projects with docker
+- Section 5: Docker Compose with multiple local containers
+- Section 6: Creating a production-grade workflow
+- Section 7: Continuous integration and Deployment with AWS
+- Section 8: Building a Multi-Container Application
+- Section 9: "Dockerizing" multiple services
+- Section 10: A Continuous integration workflow for multiple images
+- Section 11: Multi-Container deployments
+- Section 12: Onwards to kubernetes!
+- Section 13: Maintaining Sets of Containers with Deployments
+- Section 14: A multicontainer App with kuberenetes
+- Section 15: Handling traffic with ingress Controllers
+- Section 16: Kubernetes Production Deployment
+- Section 17: HTTPS Setup with kubernetes
+- Section 18: Local development with skaffold
+- Section 19: Extras
+
+
 ## Docker ecosystem
 
 - Docker client
@@ -402,4 +425,10 @@ https://kubernetes.github.io/ingress-nginx/
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+```
+
+To enable kubernetes ingress
+
+```
+minikube addons enable ingress
 ```
